@@ -229,10 +229,11 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   border-radius: 50px;
   padding: 5px;
+  color: #E8E8E8;	
 }
 
 .mobile-nav-toggle i {
-  color: #45505b;
+  color: #ff0000;
 }
 
 .mobile-nav-active {
@@ -241,10 +242,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-active #header {
   left: 0;
+  background: #181818;
 }
 
 .mobile-nav-active .mobile-nav-toggle {
-  color: #fff;
   background-color: #14905C;
 }
 

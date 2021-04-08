@@ -984,7 +984,7 @@ section {
   background-color: #14905C;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 120px) {
   .testimonials .testimonial-item p {
     width: 80%;
   }

@@ -462,6 +462,51 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+
+
+.skills #skills-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+  background: #484848;
+}
+
+.skills #skills-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.skills #skills-flters li:hover, .skills #skills-flters li.filter-active {
+  color: #14905C;
+}
+
+.skills #skills-flters li:last-child {
+  margin-right: 0;
+}
+
+.skills .lang {
+  color: #ff5a5f;
+}
+
+.skills .tech {
+  color: #8f693f;
+}
+
+.skills .casual {
+  color: #bf1346;
+}
+
+
 .skills .progress {
   height: 60px;
   display: block;
@@ -488,12 +533,28 @@ section {
   background: #B3B3B3;
 }
 
-.skills .progress-bar {
+.skills .filter-lang .progress-bar {
   width: 1px;
   height: 10px;
   transition: .9s;
-  background-color: #14905C;
+  background-color: #ff5a5f;
 }
+
+.skills .filter-tech .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: .9s;
+  background-color: #8f693f;
+}
+
+.skills .filter-casual .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: .9s;
+  background-color: #bf1346;
+}
+
+
 
 /*--------------------------------------------------------------
 # Resume

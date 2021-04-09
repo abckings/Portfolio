@@ -1,9 +1,4 @@
-/**
-* Template Name: MyResume - v4.1.0
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -115,7 +110,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -168,6 +163,33 @@
     })
   }
 
+  window.addEventListener('load', () => {
+    let skilsContainer = select('.skills-container');
+    if (skilsContainer) {
+      let skilsIsotope = new Isotope(skilsContainer, {
+        itemSelector: '.skills-item'
+      });
+
+      let skilsFilters = select('#skills-flters li', true);
+
+      on('click', '#skills-flters li', function(e) {
+        e.preventDefault();
+        skilsFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        skilsIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        skilsIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  })
+
   /**
    * Porfolio isotope and filter
    */
@@ -195,7 +217,6 @@
         });
       }, true);
     }
-
   });
 
   /**
